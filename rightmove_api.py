@@ -105,17 +105,17 @@ class Property(object):
 	# html
 	@staticmethod
 	def html_header():
-		return ['rating', 'price [GBP]', 'ago [mins]', 'site', 'maps', 'address', 'distance [km]']
+		return ['rating', 'price [GBP]', 'distance [km]', 'site', 'maps', 'address', 'ago [mins]']
 
 	def html_representation(self):
 		return [
 		str(self.rating()),
 		str(self.price), 
-		str(self.time_ago()), 
+		str('%.2f' % round(self.km_distance_from_work(), 2)),
 		HTML.link('Source', self.html_link()), 
 		HTML.link('Google Maps', self.maps_link()), 
 		self.address, 
-		str(self.km_distance_from_work())
+		str(self.time_ago())
 		]
 
 # GLOBAL
