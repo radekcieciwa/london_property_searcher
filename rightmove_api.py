@@ -23,7 +23,7 @@ C_LIMIT = 300
 C_BEDROOMS = 2
 C_DESTINATION_LON = -0.1463241
 C_DESTINATION_LAT = 51.5086111
-C_RADIUS = 3.0
+C_RADIUS = 0.5
 
 class RM_API(object):
 	Requests = requests.session()
