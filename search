@@ -1,0 +1,4 @@
+TIMESTAMP=$(date +%s)
+FILE="generated_$TIMESTAMP.html"
+python rightmove_api.py > $FILE
+open $FILE
